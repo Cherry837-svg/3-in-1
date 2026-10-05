@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр и скачивание файлов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            /* Нежный сиреневый фон страницы */
+            background-color: #f1ebf7; 
+            color: #3d2f4d;
+        }
+        h1 {
+            text-align: center;
+            color: #4a2873;
+        }
+        .file-section {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            /* Мягкая фиолетовая тень вокруг блоков */
+            box-shadow: 0 4px 15px rgba(114, 76, 166, 0.1); 
+            border: 1px solid #e1d4ed;
+        }
+        .file-section h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #5c358c;
+            border-bottom: 2px solid #f1ebf7;
+            padding-bottom: 8px;
+        }
+        .preview-box {
+            margin: 15px 0;
+            text-align: center;
+        }
+        /* Стили для PDF */
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #dcd0eb;
+            border-radius: 8px;
+        }
+        /* Стили для видео и аудио */
+        video, audio {
+            width: 100%;
+            max-width: 600px;
+            outline: none;
+            border-radius: 8px;
+        }
+        .btn-container {
+            text-align: right;
+            margin-top: 10px;
+        }
+        /* Сиреневая кнопка скачивания */
+        .download-btn {
+            display: inline-block;
+            background-color: #8a4fcf; /* Насыщенный сиреневый */
+            color: white;
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.1s;
+        }
+        /* Эффект при наведении мышки на кнопку */
+        .download-btn:hover {
+            background-color: #6f39ab; /* Чуть темнее при наведении */
+        }
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Медиа-файлы проекта</h1>
+
+    <!-- 1. PDF Документ -->
+    <div class="file-section">
+        <h2>1. PDF Документ: Hazudj_meg_nekem_3_kolonki.pdf</h2>
+        <div class="preview-box">
+            <iframe src="Hazudj_meg_nekem_3_kolonki.pdf"></iframe>
+        </div>
+        <div class="btn-container">
+            <a href="Hazudj_meg_nekem_3_kolonki.pdf" download class="download-btn">Скачать PDF</a>
+        </div>
+    </div>
+
+    <!-- 2. Видео MP4 -->
+    <div class="file-section">
+        <h2>2. Видео: kak ustanovit chasy.mp4</h2>
+        <div class="preview-box">
+            <video controls>
+                <source src="kak ustanovit chasy.mp4" type="video/mp4">
+                Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+        </div>
+        <div class="btn-container">
+            <a href="kak ustanovit chasy.mp4" download class="download-btn">Скачать Видео</a>
+        </div>
+    </div>
+
+    <!-- 3. Аудио MP3 -->
+    <div class="file-section">
+        <h2>3. Аудио: Baby Gabi - Elpattant egy hur (dalszoveg).mp3</h2>
+        <div class="preview-box">
+            <audio controls>
+                <source src="Baby Gabi - Elpattant egy hur (dalszoveg).mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+        </div>
+        <div class="btn-container">
+            <a href="Baby Gabi - Elpattant egy hur (dalszoveg).mp3" download class="download-btn">Скачать Audio</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
